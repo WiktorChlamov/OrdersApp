@@ -1,0 +1,58 @@
+﻿@page
+@model OrdersApp.Pages.Orders.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.SenderCity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.SenderCity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.SenderAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.SenderAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.RecieverCity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.RecieverCity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.RecieverAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.RecieverAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.CargoWeight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.CargoWeight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.CreatedAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.CreatedAt)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Order.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

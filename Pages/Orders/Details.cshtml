@@ -1,0 +1,61 @@
+﻿@page
+@model OrdersApp.Pages.Orders.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.SenderCity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.SenderCity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.SenderAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.SenderAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.RecieverCity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.RecieverCity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.RecieverAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.RecieverAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.CargoWeight)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.CargoWeight)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Order.CreatedAt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Order.CreatedAt)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Order.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
