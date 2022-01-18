@@ -9,7 +9,7 @@ namespace OrdersApp.Models
         [Required] [Display(Name = "Адрес отправителя:")] public string SenderAddress { get; set; }
         [Required] [Display(Name = "Город получателя:")] public string RecieverCity { get; set; }
         [Required] [Display(Name = "Адрес получателя:")] public string RecieverAddress { get; set; }
-        [Required] [Display(Name = "Вес груза:")] public double CargoWeight { get; set; }
+        [Required] [Display(Name = "Вес груза:")] public float CargoWeight { get; set; }
         [Required] [Display(Name = "Дата заказа:")] public DateTime CreatedAt { get; set; }
 
     }
